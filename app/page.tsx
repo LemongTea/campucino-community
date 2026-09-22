@@ -112,26 +112,26 @@ export default function Home() {
               Explore tools
             </a>
           </div>
-          <div className="mt-20 grid max-w-2xl grid-cols-2 gap-px border border-white/15 bg-white/15 sm:grid-cols-4">
-            <div className="bg-[#241813]/80 p-4">
+          <div className="mt-20 grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
+            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">01</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 Community
               </span>
             </div>
-            <div className="bg-[#241813]/80 p-4">
+            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">24/7</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 Curiosity
               </span>
             </div>
-            <div className="bg-[#241813]/80 p-4">
+            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">∞</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 Ideas shared
               </span>
             </div>
-            <div className="bg-[#241813]/80 p-4">
+            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">Soon</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 More features
