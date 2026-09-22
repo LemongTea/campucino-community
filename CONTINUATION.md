@@ -19,3 +19,5 @@ File ini wajib diperbarui setiap kali ada perubahan pada repository agar pekerja
 | 2026-09-22 | Memasang package `lenis` dengan npm untuk smooth scrolling. | Selesai |
 | 2026-09-22 | Membangun landing page dan mengintegrasikan Lenis serta ikon Lucide. | Dalam proses |
 | 2026-09-22 | Memigrasikan seluruh styling landing page ke utility Tailwind; `globals.css` hanya memuat import Tailwind. | Dalam proses |
+| 2026-09-22 | Mengubah layout mengikuti referensi dengan hero editorial, statistik, quick links, katalog, value section, CTA, dan footer. | Dalam proses |
+| 2026-09-22 | Memastikan seluruh ikon visual menggunakan `lucide-react`, tanpa simbol ikon unicode. | Dalam proses |
