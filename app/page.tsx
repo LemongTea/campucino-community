@@ -37,10 +37,10 @@ const catalog = [
 ];
 
 const cloudLayers = [
-  { file: "1.png", speed: -0.02, className: "opacity-30" },
-  { file: "2.png", speed: -0.05, className: "opacity-45" },
-  { file: "3.png", speed: -0.09, className: "opacity-55" },
-  { file: "4.png", speed: -0.14, className: "opacity-75" },
+  { file: "1.png", speed: 0.02, className: "opacity-25 mix-blend-screen" },
+  { file: "2.png", speed: 0.05, className: "opacity-35 mix-blend-screen" },
+  { file: "3.png", speed: 0.09, className: "opacity-45 mix-blend-screen" },
+  { file: "4.png", speed: 0.14, className: "opacity-60 mix-blend-screen" },
 ];
 
 export default function Home() {
