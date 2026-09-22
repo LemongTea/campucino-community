@@ -99,44 +99,38 @@ export default function Home() {
             bertemu dengan orang-orang yang punya rasa penasaran yang sama.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              className="flex items-center gap-3 bg-[#c77b4f] px-5 py-4 text-xs font-bold uppercase tracking-wider text-[#241813] [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:bg-[#e7a071]"
-              href="#community"
-            >
-              Join community <ArrowRight size={16} />
+            <a className="bg-[#c77b4f] p-px [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:bg-[#e7a071]" href="#community">
+              <span className="flex items-center gap-3 px-5 py-4 text-xs font-bold uppercase tracking-wider text-[#241813] [clip-path:polygon(9px_0,100%_0,calc(100%-9px)_100%,0_100%)]">Join community <ArrowRight size={16} /></span>
             </a>
-            <a
-              className="flex items-center gap-3 border border-white/25 px-5 py-4 text-xs font-bold uppercase tracking-wider [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:border-[#e7a071] hover:text-[#e7a071]"
-              href="#tools"
-            >
-              Explore tools
+            <a className="bg-white/30 p-px [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:bg-[#e7a071]" href="#tools">
+              <span className="flex items-center gap-3 bg-[#241813] px-5 py-4 text-xs font-bold uppercase tracking-wider text-white [clip-path:polygon(9px_0,100%_0,calc(100%-9px)_100%,0_100%)]">Explore tools <ArrowRight size={16} /></span>
             </a>
           </div>
           <div className="mt-20 grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
-            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
+            <div className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">01</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 Community
               </span>
-            </div>
-            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
+            </div></div>
+            <div className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">24/7</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 Curiosity
               </span>
-            </div>
-            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
+            </div></div>
+            <div className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">∞</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 Ideas shared
               </span>
-            </div>
-            <div className="border border-white/20 bg-transparent p-4 [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]">
+            </div></div>
+            <div className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
               <b className="text-2xl text-[#e7a071]">Soon</b>
               <span className="mt-2 block text-[9px] uppercase tracking-widest text-white/50">
                 More features
               </span>
-            </div>
+            </div></div>
           </div>
         </div>
         <div className="absolute bottom-8 right-8 hidden items-center gap-2 text-[9px] uppercase tracking-[.3em] text-white/40 md:flex">
