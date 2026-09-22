@@ -5,9 +5,10 @@ File ini wajib diperbarui setiap kali ada perubahan pada repository agar pekerja
 ## Status Terakhir
 
 - Tanggal: 2026-09-22
-- Perubahan: Menambahkan identitas repository di README dan menyiapkan commit awal Git.
-- Status: Commit awal berhasil dipush ke branch `main` di remote GitHub.
-- Langkah berikutnya: Lanjutkan perubahan berikutnya dari branch `main`.
+- Perubahan: Memasang dependency `lenis` untuk kebutuhan smooth scroll.
+- Status: Instalasi berhasil; belum diintegrasikan ke komponen atau layout.
+- Langkah berikutnya: Integrasikan Lenis ke aplikasi Next.js, lalu uji smooth scrolling.
+- Perubahan sesi ini: Membangun landing page Campucino Community dengan navigasi, hero, section fitur, gift banner, responsif mobile, palet cappuccino, smooth scroll Lenis, ikon Lucide, dan full utility Tailwind tanpa CSS custom.
 
 ## Riwayat Perubahan
 
@@ -15,3 +16,6 @@ File ini wajib diperbarui setiap kali ada perubahan pada repository agar pekerja
 |---|---|---|
 | 2026-09-22 | Menambahkan `CONTINUATION.md` sebagai catatan wajib untuk pekerjaan lanjutan. | Selesai |
 | 2026-09-22 | Menambahkan identitas repository di `README.md`, membuat commit awal, dan push ke GitHub. | Selesai |
+| 2026-09-22 | Memasang package `lenis` dengan npm untuk smooth scrolling. | Selesai |
+| 2026-09-22 | Membangun landing page dan mengintegrasikan Lenis serta ikon Lucide. | Dalam proses |
+| 2026-09-22 | Memigrasikan seluruh styling landing page ke utility Tailwind; `globals.css` hanya memuat import Tailwind. | Dalam proses |
