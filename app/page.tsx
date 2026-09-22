@@ -101,15 +101,15 @@ export default function Home() {
       </nav>
       <section
         id="home"
-        className="relative flex min-h-[780px] items-end bg-[radial-gradient(circle_at_76%_25%,#6b3c29_0%,#241813_48%,#160f0c_100%)]"
+        className="relative flex min-h-[780px] items-end overflow-hidden bg-[radial-gradient(circle_at_76%_25%,#6b3c29_0%,#241813_48%,#160f0c_100%)]"
       >
         <div data-parallax="-0.08" className="absolute right-[-10%] top-32 h-[620px] w-[620px] rounded-full border border-[#c77b4f]/20 bg-[#6b3c29]/20 shadow-[0_0_120px_#8d4c2d55] transition-transform duration-100" />
         <div data-parallax="-0.18" className="absolute right-[15%] top-52 text-[#c77b4f]/50 transition-transform duration-100">
           <Coffee size={190} strokeWidth={0.6} />
         </div>
         {cloudLayers.map(({ file, speed, className }) => (
-          <div key={file} data-parallax={speed} className={`pointer-events-none absolute z-[1] transition-transform duration-100 ${className}`}>
-            <Image src={`/Clouds/Clouds 7/${file}`} alt="" width={1200} height={700} className="h-auto w-full" priority={file === "1.png"} />
+          <div key={file} data-parallax={speed} className={`pointer-events-none absolute z-[1] max-w-none transition-transform duration-100 ${className}`}>
+            <Image src={`/Clouds/Clouds 7/${file}`} alt="" width={1200} height={700} className="h-auto w-full max-w-none" priority={file === "1.png"} />
           </div>
         ))}
         <div className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-[1180px] pb-20 pt-40">
