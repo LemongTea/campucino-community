@@ -1,0 +1,17 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Campucino YouTube Cookie Exporter",
+  "version": "1.0.0",
+  "description": "Export YouTube cookies in Netscape format for local yt-dlp use.",
+  "action": {
+    "default_title": "Export YouTube cookies",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["cookies", "downloads"],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://youtube.com/*",
+    "https://*.google.com/*",
+    "https://google.com/*"
+  ]
+}

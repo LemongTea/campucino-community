@@ -4,6 +4,8 @@ import Image from "next/image";
 import {
   ArrowRight,
   BookOpen,
+  AudioLines,
+  ChevronDown,
   Coffee,
   Gift,
   LogIn,
@@ -114,7 +116,17 @@ export default function Home() {
           <a className="text-[#e7a071]" href="#home">
             Home
           </a>
-          <a href="#tools">Tools</a>
+          <div className="group relative">
+            <button type="button" className="flex items-center gap-1" aria-haspopup="true">
+              Tools <ChevronDown size={13} />
+            </button>
+            <div className="invisible absolute left-1/2 top-full z-50 mt-4 w-56 -translate-x-1/2 translate-y-1 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <a href="/tools/audio-upload-approved" className="flex items-center gap-3 border border-[#e7a071]/30 bg-[#241813] p-4 text-left text-[10px] tracking-[.12em] text-[#fff4e4] hover:bg-[#35251d] hover:text-[#ffd08a]">
+                <AudioLines size={17} className="text-[#e7a071]" />
+                <span>Audio Upload Approved</span>
+              </a>
+            </div>
+          </div>
           <a href="#community">Community</a>
           <a href="#gift">Gift</a>
         </div>
@@ -136,7 +148,12 @@ export default function Home() {
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
         {menuOpen && <div id="mobile-navigation" className="absolute inset-x-0 top-24 grid gap-1 border border-[#e7a071]/30 bg-[#1c1512] p-4 md:hidden">
-          {["Home", "Tools", "Community", "Gift"].map((label) => <a key={label} href={`#${label.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="p-3 text-sm hover:bg-[#35251d] hover:text-[#ffd08a]">{label}</a>)}
+          <a href="#home" onClick={() => setMenuOpen(false)} className="p-3 text-sm hover:bg-[#35251d] hover:text-[#ffd08a]">Home</a>
+          <a href="#tools" onClick={() => setMenuOpen(false)} className="p-3 text-sm hover:bg-[#35251d] hover:text-[#ffd08a]">Tools</a>
+          <a href="/tools/audio-upload-approved" onClick={() => setMenuOpen(false)} className="ml-4 flex items-center gap-2 border-l border-[#e7a071]/30 p-3 text-xs text-[#e7a071] hover:bg-[#35251d] hover:text-[#ffd08a]"><AudioLines size={15} /> Audio Upload Approved</a>
+          <a href="#community" onClick={() => setMenuOpen(false)} className="p-3 text-sm hover:bg-[#35251d] hover:text-[#ffd08a]">Community</a>
+          <a href="#gift" onClick={() => setMenuOpen(false)} className="p-3 text-sm hover:bg-[#35251d] hover:text-[#ffd08a]">Gift</a>
+
         </div>}
       </nav>
       <section
@@ -170,58 +187,12 @@ export default function Home() {
               <span className="flex items-center gap-3 bg-[#241813] px-5 py-4 text-xs font-bold uppercase tracking-wider text-[#fff4e4] [clip-path:polygon(0_0,calc(100%-9px)_0,100%_9px,100%_100%,9px_100%,0_calc(100%-9px))]">Explore tools <ArrowRight size={16} /></span>
             </a>
           </div>
-          <div className="mt-20 grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
-            <div data-reveal className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
-              <b className="text-2xl text-[#e7a071]">01</b>
-              <span className="mt-2 block text-[9px] uppercase tracking-widest text-[#cbbcaf]">
-                Community
-              </span>
-            </div></div>
-            <div data-reveal className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
-              <b className="text-2xl text-[#e7a071]">24/7</b>
-              <span className="mt-2 block text-[9px] uppercase tracking-widest text-[#cbbcaf]">
-                Curiosity
-              </span>
-            </div></div>
-            <div data-reveal className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
-              <b className="text-2xl text-[#e7a071]">∞</b>
-              <span className="mt-2 block text-[9px] uppercase tracking-widest text-[#cbbcaf]">
-                Ideas shared
-              </span>
-            </div></div>
-            <div data-reveal className="bg-white/30 p-px [clip-path:polygon(8px_0,100%_0,calc(100%-8px)_100%,0_100%)]"><div className="bg-[#241813] p-4 [clip-path:polygon(7px_0,100%_0,calc(100%-7px)_100%,0_100%)]">
-              <b className="text-2xl text-[#e7a071]">Soon</b>
-              <span className="mt-2 block text-[9px] uppercase tracking-widest text-[#cbbcaf]">
-                More features
-              </span>
-            </div></div>
-          </div>
         </div>
         <PolygonBorder className="absolute bottom-8 right-8 hidden items-center gap-2 px-3 py-2 text-[9px] uppercase tracking-[.3em] text-[#cbbcaf] md:flex" corner="8px" thickness="1px">
           <span className="h-8 w-px bg-[#c77b4f]" />
           scroll to explore
         </PolygonBorder>
       </section>
-      <div className="border-y border-white/10 bg-[#302019]">
-        <div className="mx-auto flex w-[calc(100%-40px)] max-w-[1180px] flex-wrap items-center justify-between gap-5 py-5 text-[10px] font-bold uppercase tracking-[.18em] text-[#cbbcaf]">
-          <span className="text-[#e7a071]">Explore Campucino</span>
-          <a href="#tools" className="flex items-center gap-2 hover:text-white">
-            <BookOpen size={15} /> Tools
-          </a>
-          <a
-            href="#community"
-            className="flex items-center gap-2 hover:text-white"
-          >
-            <Users size={15} /> Community
-          </a>
-          <a href="#gift" className="flex items-center gap-2 hover:text-white">
-            <Gift size={15} /> Gift corner
-          </a>
-          <span className="hidden items-center gap-2 text-[#e7a071] md:flex">
-            <Sparkles size={14} /> stay curious
-          </span>
-        </div>
-      </div>
       <section
         id="tools"
         className="relative z-10 flex min-h-screen items-center bg-[#1c1512] px-5 py-24 lg:sticky lg:top-0 lg:px-8 lg:py-32"
@@ -374,7 +345,17 @@ export default function Home() {
             </h3>
             <div className="mt-5 grid gap-3 text-xs text-[#cbbcaf]">
               <a href="#home">Home</a>
-              <a href="#tools">Tools</a>
+              <div className="group relative">
+            <button type="button" className="flex items-center gap-1" aria-haspopup="true">
+              Tools <ChevronDown size={13} />
+            </button>
+            <div className="invisible absolute left-1/2 top-full z-50 mt-4 w-56 -translate-x-1/2 translate-y-1 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <a href="/tools/audio-upload-approved" className="flex items-center gap-3 border border-[#e7a071]/30 bg-[#241813] p-4 text-left text-[10px] tracking-[.12em] text-[#fff4e4] hover:bg-[#35251d] hover:text-[#ffd08a]">
+                <AudioLines size={17} className="text-[#e7a071]" />
+                <span>Audio Upload Approved</span>
+              </a>
+            </div>
+          </div>
               <a href="#community">Community</a>
               <a href="#gift">Gift</a>
             </div>
