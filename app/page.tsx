@@ -100,13 +100,13 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              className="flex items-center gap-3 bg-[#c77b4f] px-5 py-4 text-xs font-bold uppercase tracking-wider text-[#241813]"
+              className="flex items-center gap-3 bg-[#c77b4f] px-5 py-4 text-xs font-bold uppercase tracking-wider text-[#241813] [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:bg-[#e7a071]"
               href="#community"
             >
               Join community <ArrowRight size={16} />
             </a>
             <a
-              className="flex items-center gap-3 border border-white/25 px-5 py-4 text-xs font-bold uppercase tracking-wider"
+              className="flex items-center gap-3 border border-white/25 px-5 py-4 text-xs font-bold uppercase tracking-wider [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:border-[#e7a071] hover:text-[#e7a071]"
               href="#tools"
             >
               Explore tools
