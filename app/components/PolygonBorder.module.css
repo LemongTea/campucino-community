@@ -1,0 +1,26 @@
+/*
+ * Border-only polygon component.
+ * Change --polygon-corner to control the 45° top-right cut.
+ * Change --polygon-thickness to control the border thickness.
+ * The mask removes the center, so the content stays transparent.
+ */
+.polygonBorder {
+  --polygon-corner: 10px;
+  --polygon-thickness: 1px;
+  position: relative;
+  display: inline-block;
+  color: currentColor;
+  isolation: isolate;
+}
+
+.polygonBorder::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: currentColor;
+  clip-path: polygon(0 0, calc(100% - var(--polygon-corner)) 0, 100% var(--polygon-corner), 100% 100%, 0 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  padding: var(--polygon-thickness);
+}
