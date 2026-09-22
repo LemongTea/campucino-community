@@ -12,6 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 import Lenis from "lenis";
+import { PolygonBorder } from "./components/PolygonBorder";
 
 const catalog = [
   {
@@ -37,7 +38,13 @@ const catalog = [
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis({ autoRaf: true, lerp: 0.08 });
-    return () => lenis.destroy();
+    const parallax = Array.from(document.querySelectorAll<HTMLElement>("[data-parallax]"));
+    const reveal = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("!translate-y-0", "!opacity-100")), { threshold: 0.15 });
+    reveal.forEach((element) => observer.observe(element));
+    const update = ({ scroll }: { scroll: number }) => parallax.forEach((element) => { const speed = Number(element.dataset.parallax ?? 0); element.style.transform = `translate3d(0, ${scroll * speed}px, 0)`; });
+    lenis.on("scroll", update);
+    return () => { observer.disconnect(); lenis.off("scroll", update); lenis.destroy(); };
   }, []);
   return (
     <main className="min-h-screen overflow-hidden bg-[#241813] text-[#fff9f0]">
@@ -81,15 +88,15 @@ export default function Home() {
         id="home"
         className="relative flex min-h-[780px] items-end bg-[radial-gradient(circle_at_76%_25%,#6b3c29_0%,#241813_48%,#160f0c_100%)]"
       >
-        <div className="absolute right-[-10%] top-32 h-[620px] w-[620px] rounded-full border border-[#c77b4f]/20 bg-[#6b3c29]/20 shadow-[0_0_120px_#8d4c2d55]" />
-        <div className="absolute right-[15%] top-52 text-[#c77b4f]/50">
+        <div data-parallax="-0.08" className="absolute right-[-10%] top-32 h-[620px] w-[620px] rounded-full border border-[#c77b4f]/20 bg-[#6b3c29]/20 shadow-[0_0_120px_#8d4c2d55] transition-transform duration-100" />
+        <div data-parallax="-0.18" className="absolute right-[15%] top-52 text-[#c77b4f]/50 transition-transform duration-100">
           <Coffee size={190} strokeWidth={0.6} />
         </div>
         <div className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-[1180px] pb-20 pt-40">
           <div className="mb-6 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.22em] text-[#e7a071]">
             <Zap size={14} /> komunitas yang sedang bertumbuh
           </div>
-          <h1 className="max-w-3xl text-6xl font-black uppercase leading-[.88] tracking-[-.07em] md:text-8xl">
+          <h1 data-reveal className="max-w-3xl translate-y-8 text-6xl font-black uppercase leading-[.88] tracking-[-.07em] opacity-0 transition duration-1000 md:text-8xl">
             Make room
             <br />
             <span className="text-[#e7a071]">for growth.</span>
@@ -133,10 +140,10 @@ export default function Home() {
             </div></div>
           </div>
         </div>
-        <div className="absolute bottom-8 right-8 hidden items-center gap-2 text-[9px] uppercase tracking-[.3em] text-white/40 md:flex">
+        <PolygonBorder className="absolute bottom-8 right-8 hidden items-center gap-2 px-3 py-2 text-[9px] uppercase tracking-[.3em] text-white/40 md:flex" corner="8px" thickness="1px">
           <span className="h-8 w-px bg-[#c77b4f]" />
           scroll to explore
-        </div>
+        </PolygonBorder>
       </section>
       <div className="border-y border-white/10 bg-[#302019]">
         <div className="mx-auto flex w-[calc(100%-40px)] max-w-[1180px] flex-wrap items-center justify-between gap-5 py-5 text-[10px] font-bold uppercase tracking-[.18em] text-white/55">
