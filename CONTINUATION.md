@@ -29,3 +29,5 @@ File ini wajib diperbarui setiap kali ada perubahan pada repository agar pekerja
 | 2026-09-22 | Menambahkan animasi scrollytelling berbasis Lenis: parallax layer hero, reveal headline saat masuk viewport, dan cleanup observer/listener. | Dalam proses |
 | 2026-09-22 | Memperbaiki sudut tombol: diagonal hanya pada ujung kanan atas dan kiri bawah. | Dalam proses |
 | 2026-09-22 | Menambahkan sticky scrollytelling per section: Tools, Community, dan Gift tertahan satu viewport lalu berganti berlapis saat scroll. | Dalam proses |
+| 2026-09-22 | Menambahkan 4 layer PNG dari `public/Clouds/Clouds 7`; gambar `1.png` berada paling belakang dan seluruh layer bergerak dengan parallax Lenis. | Dalam proses |
+| 2026-09-22 | Menambahkan motion entrance untuk seluruh typography dan tombol melalui opacity, translate, stagger, dan transition berbasis viewport/load. | Dalam proses |

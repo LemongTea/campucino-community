@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import Image from "next/image";
 import {
   ArrowRight,
   BookOpen,
@@ -35,11 +36,25 @@ const catalog = [
   },
 ];
 
+const cloudLayers = [
+  { file: "1.png", speed: -0.02, className: "left-[-8%] top-[16%] w-[76%] opacity-30" },
+  { file: "2.png", speed: -0.05, className: "right-[8%] top-[25%] w-[52%] opacity-45" },
+  { file: "3.png", speed: -0.09, className: "left-[18%] top-[42%] w-[60%] opacity-55" },
+  { file: "4.png", speed: -0.14, className: "right-[-6%] bottom-[8%] w-[72%] opacity-75" },
+];
+
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis({ autoRaf: true, lerp: 0.08 });
     const parallax = Array.from(document.querySelectorAll<HTMLElement>("[data-parallax]"));
     const reveal = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const motion = Array.from(document.querySelectorAll<HTMLElement>("h1, h2, h3, p, a, button"));
+    motion.forEach((element, index) => {
+      element.style.opacity = "0";
+      element.style.transform = "translateY(16px)";
+      element.style.transition = `opacity 700ms ease ${Math.min(index * 35, 500)}ms, transform 700ms ease ${Math.min(index * 35, 500)}ms`;
+    });
+    requestAnimationFrame(() => motion.forEach((element) => { element.style.opacity = "1"; element.style.transform = "translateY(0)"; }));
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("!translate-y-0", "!opacity-100")), { threshold: 0.15 });
     reveal.forEach((element) => observer.observe(element));
     const update = ({ scroll }: { scroll: number }) => parallax.forEach((element) => { const speed = Number(element.dataset.parallax ?? 0); element.style.transform = `translate3d(0, ${scroll * speed}px, 0)`; });
@@ -92,6 +107,11 @@ export default function Home() {
         <div data-parallax="-0.18" className="absolute right-[15%] top-52 text-[#c77b4f]/50 transition-transform duration-100">
           <Coffee size={190} strokeWidth={0.6} />
         </div>
+        {cloudLayers.map(({ file, speed, className }) => (
+          <div key={file} data-parallax={speed} className={`pointer-events-none absolute z-[1] transition-transform duration-100 ${className}`}>
+            <Image src={`/Clouds/Clouds 7/${file}`} alt="" width={1200} height={700} className="h-auto w-full" priority={file === "1.png"} />
+          </div>
+        ))}
         <div className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-[1180px] pb-20 pt-40">
           <div className="mb-6 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.22em] text-[#e7a071]">
             <Zap size={14} /> komunitas yang sedang bertumbuh
