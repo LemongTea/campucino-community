@@ -4,6 +4,11 @@ File ini wajib diperbarui setiap kali ada perubahan pada repository agar pekerja
 
 ## Status Terakhir
 
+- Pembaruan layout: palet dark espresso, cream dan caramel konsisten; typography tanpa shadow. Hero memakai overlay gelap di atas enam gambar nature_9 tanpa blend mode.
+- Motion: reveal per viewport menggunakan Web Animations, hover/press/focus tombol, cleanup dan prefers-reduced-motion. Parallax dibatasi tinggi hero, base layer diam, overscan 12% mencegah celah.
+- Layout: section desktop berlapis, mobile memakai alur normal; Gift dan footer tidak menutupi CTA. Menu mobile dapat dibuka/ditutup. Fitur belum tersedia diberi label segera.
+- Verifikasi: lint dan production build berhasil sebelum penyesuaian akhir spacing; browser lokal diperiksa untuk Hero, Tools, Community, Gift, footer. Belum push.
+
 - Tanggal: 2026-09-22
 - Perubahan: Memasang dependency `lenis` untuk kebutuhan smooth scroll.
 - Status: Instalasi berhasil; belum diintegrasikan ke komponen atau layout.
@@ -33,5 +38,12 @@ File ini wajib diperbarui setiap kali ada perubahan pada repository agar pekerja
 | 2026-09-22 | Menambahkan motion entrance untuk seluruh typography dan tombol melalui opacity, translate, stagger, dan transition berbasis viewport/load. | Dalam proses |
 | 2026-09-22 | Membalik arah parallax cloud agar bergerak ke bawah saat scroll dan menambahkan `mix-blend-screen` agar lebih menyatu dengan dark mode. | Dalam proses |
 | 2026-09-22 | Mengganti sumber layer parallax dari `public/Clouds/Clouds 7` ke `public/Clouds/Clouds 5`; `1.png` tetap menjadi layer paling belakang. | Dalam proses |
+| 2026-09-22 | Menghapus ilustrasi cangkir besar dan shine lingkaran dari hero sesuai arahan desain terbaru. | Dalam proses |
+| 2026-09-22 | Mengganti parallax hero ke `public/Nature/nature_6` dengan layer `1.png` sampai `3.png`; `1.png` paling belakang. | Dalam proses |
+| 2026-09-22 | Menyederhanakan parallax nature agar hanya memakai `1.png` dan `3.png`; `2.png` tidak digunakan. | Dalam proses |
+| 2026-09-22 | Menghapus `mix-blend-screen` agar layer nature tampil tanpa blend dan mempertahankan warna asli. | Dalam proses |
+| 2026-09-22 | Mengganti parallax ke `public/Nature/nature_9` dengan enam layer `1.png` sampai `6.png`; urutan 1 paling belakang dan 6 paling depan. | Dalam proses |
+| 2026-09-22 | Menyetel ulang depth parallax enam layer nature dan meningkatkan kontras typography serta warna CTA hero untuk background nature. | Dalam proses |
+| 2026-09-22 | Menghapus seluruh text shadow dari typography hero sesuai arahan desain flat. | Dalam proses |
 | 2026-09-22 | Membatasi layer cloud agar fit dan ter-clipping di dalam area hero menggunakan `overflow-hidden` dan `max-w-none`. | Dalam proses |
 | 2026-09-22 | Memperbaiki cloud layer setelah inspeksi browser: PNG adalah full-scene 16:9, sehingga sekarang setiap layer memenuhi hero dengan `Image fill` dan `object-cover`. | Dalam proses |
