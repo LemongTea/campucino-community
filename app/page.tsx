@@ -37,10 +37,10 @@ const catalog = [
 ];
 
 const cloudLayers = [
-  { file: "1.png", speed: -0.02, className: "left-[-8%] top-[16%] w-[76%] opacity-30" },
-  { file: "2.png", speed: -0.05, className: "right-[8%] top-[25%] w-[52%] opacity-45" },
-  { file: "3.png", speed: -0.09, className: "left-[18%] top-[42%] w-[60%] opacity-55" },
-  { file: "4.png", speed: -0.14, className: "right-[-6%] bottom-[8%] w-[72%] opacity-75" },
+  { file: "1.png", speed: -0.02, className: "opacity-30" },
+  { file: "2.png", speed: -0.05, className: "opacity-45" },
+  { file: "3.png", speed: -0.09, className: "opacity-55" },
+  { file: "4.png", speed: -0.14, className: "opacity-75" },
 ];
 
 export default function Home() {
@@ -108,8 +108,8 @@ export default function Home() {
           <Coffee size={190} strokeWidth={0.6} />
         </div>
         {cloudLayers.map(({ file, speed, className }) => (
-          <div key={file} data-parallax={speed} className={`pointer-events-none absolute z-[1] max-w-none transition-transform duration-100 ${className}`}>
-            <Image src={`/Clouds/Clouds 7/${file}`} alt="" width={1200} height={700} className="h-auto w-full max-w-none" priority={file === "1.png"} />
+          <div key={file} data-parallax={speed} className={`pointer-events-none absolute inset-0 z-[1] h-full w-full transition-transform duration-100 ${className}`}>
+            <Image src={`/Clouds/Clouds 7/${file}`} alt="" fill sizes="100vw" className="object-cover" priority={file === "1.png"} />
           </div>
         ))}
         <div className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-[1180px] pb-20 pt-40">
