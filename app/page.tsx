@@ -109,7 +109,7 @@ export default function Home() {
         </div>
         {cloudLayers.map(({ file, speed, className }) => (
           <div key={file} data-parallax={speed} className={`pointer-events-none absolute inset-0 z-[1] h-full w-full transition-transform duration-100 ${className}`}>
-            <Image src={`/Clouds/Clouds 7/${file}`} alt="" fill sizes="100vw" className="object-cover" priority={file === "1.png"} />
+            <Image src={`/Clouds/Clouds 5/${file}`} alt="" fill sizes="100vw" className="object-cover" priority={file === "1.png"} />
           </div>
         ))}
         <div className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-[1180px] pb-20 pt-40">
