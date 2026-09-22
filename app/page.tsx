@@ -74,7 +74,7 @@ export default function Home() {
             <LogIn size={15} /> Login
           </a>
           <a
-            className="flex items-center gap-2 bg-[#c77b4f] px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-[#241813] [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:bg-[#e7a071]"
+            className="flex items-center gap-2 bg-[#c77b4f] px-4 py-3 text-[11px] font-bold uppercase tracking-wider text-[#241813] [clip-path:polygon(0_0,calc(100%-10px)_0,100%_10px,100%_100%,10px_100%,0_calc(100%-10px))] transition hover:bg-[#e7a071]"
             href="#community"
           >
             Join us <ArrowRight size={14} />
@@ -106,11 +106,11 @@ export default function Home() {
             bertemu dengan orang-orang yang punya rasa penasaran yang sama.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a className="bg-[#c77b4f] p-px [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:bg-[#e7a071]" href="#community">
-              <span className="flex items-center gap-3 px-5 py-4 text-xs font-bold uppercase tracking-wider text-[#241813] [clip-path:polygon(9px_0,100%_0,calc(100%-9px)_100%,0_100%)]">Join community <ArrowRight size={16} /></span>
+            <a className="bg-[#c77b4f] p-px [clip-path:polygon(0_0,calc(100%-10px)_0,100%_10px,100%_100%,10px_100%,0_calc(100%-10px))] transition hover:bg-[#e7a071]" href="#community">
+              <span className="flex items-center gap-3 px-5 py-4 text-xs font-bold uppercase tracking-wider text-[#241813] [clip-path:polygon(0_0,calc(100%-9px)_0,100%_9px,100%_100%,9px_100%,0_calc(100%-9px))]">Join community <ArrowRight size={16} /></span>
             </a>
-            <a className="bg-white/30 p-px [clip-path:polygon(10px_0,100%_0,calc(100%-10px)_100%,0_100%)] transition hover:bg-[#e7a071]" href="#tools">
-              <span className="flex items-center gap-3 bg-[#241813] px-5 py-4 text-xs font-bold uppercase tracking-wider text-white [clip-path:polygon(9px_0,100%_0,calc(100%-9px)_100%,0_100%)]">Explore tools <ArrowRight size={16} /></span>
+            <a className="bg-white/30 p-px [clip-path:polygon(0_0,calc(100%-10px)_0,100%_10px,100%_100%,10px_100%,0_calc(100%-10px))] transition hover:bg-[#e7a071]" href="#tools">
+              <span className="flex items-center gap-3 bg-[#241813] px-5 py-4 text-xs font-bold uppercase tracking-wider text-white [clip-path:polygon(0_0,calc(100%-9px)_0,100%_9px,100%_100%,9px_100%,0_calc(100%-9px))]">Explore tools <ArrowRight size={16} /></span>
             </a>
           </div>
           <div className="mt-20 grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
@@ -167,7 +167,7 @@ export default function Home() {
       </div>
       <section
         id="tools"
-        className="mx-auto w-[calc(100%-40px)] max-w-[1180px] py-28 md:py-36"
+        className="sticky top-0 z-10 mx-auto flex min-h-screen w-[calc(100%-40px)] max-w-[1180px] items-center bg-[#241813] py-28 md:py-36"
       >
         <div className="grid gap-12 md:grid-cols-[.8fr_1.2fr] md:gap-24">
           <div>
@@ -219,7 +219,7 @@ export default function Home() {
       </section>
       <section
         id="community"
-        className="border-y border-white/10 bg-[#f0dfc9] text-[#241813]"
+        className="sticky top-0 z-20 flex min-h-screen items-center border-y border-white/10 bg-[#f0dfc9] text-[#241813]"
       >
         <div className="mx-auto grid w-[calc(100%-40px)] max-w-[1180px] gap-12 py-28 md:grid-cols-2 md:items-center md:gap-24">
           <div>
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
       <section
         id="gift"
-        className="mx-auto w-[calc(100%-40px)] max-w-[1180px] py-28 text-center md:py-36"
+        className="sticky top-0 z-30 mx-auto flex min-h-screen w-[calc(100%-40px)] max-w-[1180px] flex-col justify-center py-28 text-center md:py-36"
       >
         <Gift className="mx-auto mb-6 text-[#e7a071]" size={31} />
         <div className="text-[10px] font-bold uppercase tracking-[.22em] text-[#e7a071]">

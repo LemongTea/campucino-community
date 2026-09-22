@@ -27,3 +27,5 @@ File ini wajib diperbarui setiap kali ada perubahan pada repository agar pekerja
 | 2026-09-22 | Menyesuaikan CTA dan statistik agar memakai border diagonal berlapis dengan sudut terpotong seperti referensi visual. | Dalam proses |
 | 2026-09-22 | Menambahkan komponen reusable `PolygonBorder` berbasis CSS mask dan clip-path: transparan, border-only, responsif, dan dapat dikustomisasi lewat variabel CSS. | Dalam proses |
 | 2026-09-22 | Menambahkan animasi scrollytelling berbasis Lenis: parallax layer hero, reveal headline saat masuk viewport, dan cleanup observer/listener. | Dalam proses |
+| 2026-09-22 | Memperbaiki sudut tombol: diagonal hanya pada ujung kanan atas dan kiri bawah. | Dalam proses |
+| 2026-09-22 | Menambahkan sticky scrollytelling per section: Tools, Community, dan Gift tertahan satu viewport lalu berganti berlapis saat scroll. | Dalam proses |
